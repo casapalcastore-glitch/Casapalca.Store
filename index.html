@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Casapalca Market Online – Productos de primera necesidad con delivery</title>
+  <meta name="description" content="Compra online alimentos, quesos, lácteos y abarrotes en Casapalca. Delivery local rápido. Paga con Yape, Plin o efectivo." />
+  <meta name="keywords" content="Casapalca, tienda online, delivery, quesos, abarrotes, alimentos, víveres, Perú" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://tu-dominio.netlify.app/" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Casapalca Market Online" />
+  <meta property="og:description" content="Tienda online de productos de primera necesidad en Casapalca con delivery rápido." />
+  <meta property="og:url" content="https://tu-dominio.netlify.app/" />
+  <meta property="og:image" content="https://placehold.co/1200x630/png?text=Casapalca+Market" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Casapalca Market Online" />
+  <meta name="twitter:description" content="Compra online alimentos y abarrotes en Casapalca. Delivery local rápido." />
+  <meta name="twitter:image" content="https://placehold.co/1200x630/png?text=Casapalca+Market" />
+
+  <!-- Pega aquí el meta de verificación de Google Search Console -->
+  <!-- GOOGLE_SITE_VERIFICATION -->
+
+  <style>
+    :root {
+      --bg: #f7f7f8;
+      --card: #ffffff;
+      --text: #1f2937;
+      --accent: #0d9488; /* teal-600 */
+      --accent-dark: #0f766e; /* teal-700 */
+    }
+       body { 
+  margin: 0; 
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; 
+  color: var(--text); 
+  background: linear-gradient(135deg, #ec4899, #3b82f6);
+}
+
+a { 
+  color: inherit; 
+}
+* { box-sizing: border-box; }
+    .add-to-cart {
+  background: linear-gradient(90deg, #00c6ff, #7b2ff7); /* celeste a morado */
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+    header { background:darkblue;  /* 👈 azul oscuro */(120deg, var(--accent), #14b8a6); color: #fff; padding: 28px 16px; }
+    header .wrap { max-width: 1080px; margin: 0 auto; display: grid; gap: 10px; }
+    header h1 { margin: 0; font-size: 1.9rem; letter-spacing: .2px; }
+    header p { margin: 0; opacity: .95; }
+    nav { background: #023047; }
+    nav .wrap { max-width: 1080px; margin: 0 auto; display: flex; gap: 16px; padding: 10px 8px; align-items: center; }
+    nav a { color: #fff; text-decoration: none; font-weight: 600; padding: 8px 10px; border-radius: 10px; }
+    nav a:hover, .btn:hover { filter: brightness(.95); }
+
+    main { max-width: 1080px; margin: 0 auto; padding: 20px 16px 60px; }
+
+    .hero { display: grid; gap: 14px; margin: 16px 0 8px; }
+    .hero .cta { display: inline-flex; gap: 10px; align-items: center; background: var(--accent); color: #fff; padding: 12px 14px; border-radius: 12px; text-decoration: none; width: fit-content; font-weight: 700; }
+
+    .search { margin: 22px 0 6px; display: flex; gap: 10px; }
+    .search input { flex: 1; padding: 12px 14px; border-radius: 12px; border: 1px solid #e5e7eb; background: #fff; font-size: 1rem; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+    .card { background: var(--card); border-radius: 14px; box-shadow: 0 6px 16px rgba(2, 6, 23, 0.06); overflow: hidden; display: grid; }
+    .card img { width: 100%; height: 160px; object-fit: cover; display: block; }
+    .card .pad { padding: 12px; display: grid; gap: 8px; }
+    .price { font-weight: 700; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 10px 12px; border-radius: 10px; background: var(--accent); color: #fff; text-decoration: none; font-weight: 700; }
+    
+    section { margin-top: 34px; }
+    h2 { margin: 8px 0 10px; font-size: 1.4rem; }
+
+    .contact { background: #ffffff; border-radius: 14px; box-shadow: 0 6px 16px rgba(2, 6, 23, 0.06); padding: 16px; display: grid; gap: 6px; }
+
+    footer { border-top: 1px solid #e5e7eb; margin-top: 40px; }
+    footer .wrap { max-width: 1080px; margin: 0 auto; padding: 18px 16px; font-size: .95rem; color: #003366; }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .card, .contact, .hero .cta { transition: transform .15s ease; }
+      .card:hover { transform: translateY(-2px); }
+    }
+  </style>
+  </head>
+<body>
+  <header aria-label="Encabezado">
+    <div class="wrap">
+      <h1>Casapalca Market Online</h1>
+      <p>Productos de primera necesidad con delivery local: alimentos, quesos, lácteos y abarrotes.</p>
+      <a class="cta" id="cta-whatsapp" href="https://wa.me/519171448839?text=Hola%20Casapalca%20Market%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" aria-label="Hacer pedido por WhatsApp">
+        💬 Hacer pedido por WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <nav aria-label="Navegación principal">
+    <div class="wrap">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#delivery">Delivery</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="catalogo" aria-labelledby="h2-catalogo">
+      <h2 id="h2-catalogo">Catálogo de productos</h2>
+      <div class="search" role="search">
+        <input id="search" type="search" placeholder="Buscar: arroz, queso, aceite…" aria-label="Buscar productos" />
+      </div>
+      <div class="grid" id="product-grid" aria-live="polite">
+        <!-- Tarjetas de producto -->
+        <article class="card" data-name="Queso fresco" data-price="15">
+          <img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThyn3neFy8dDLIT0EFEHgHqgMlaoMPwYhtng&s" alt="Queso fresco" />
+          <div class="pad">
+            <h3>Queso fresco</h3>
+            <p class="price">S/ 15.00 / molde</p>
+            <a class="btn" data-whats="Queso fresco" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Queso fresco" data-price="15.00">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Leche entera" data-price="5">
+          <img loading="lazy" src="https://i.pinimg.com/736x/28/db/27/28db27fb38f8101da9938e896a98b7f8.jpg" alt="Leche entera" />
+          <div class="pad">
+            <h3>Leche entera Gloria </h3>
+            <p class="price">S/ 4.20 / unidad</p>
+            <a class="btn" data-whats="Leche entera" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Leche entera Gloria" data-price="4.20">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Manjar Blanco" data-price="15.90">
+          <img loading="lazy" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiJWpFM_CEjXuKXllZ6ZmHQs9MAQwziwJPuOfkNWyyCy7G0e2FVB6rhGuU5BDfTpz6FocTLQ9HyQhOs_FHNK_-vpy9XLGJbuG3fQYCKRCoJ83K-lpMeJSm39TS5SFDeU5XwFKE8VtnwopM/s400/etiqueta.jpg" alt="Manjar Blanco" />
+          <div class="pad">
+            <h3>Manjar Blanco </h3>
+            <p class="price">S/ 15.00 / 450 g</p>
+            <a class="btn" data-whats="Manjar Blanco" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Manjar Blanco" data-price="15.00">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Arroz" data-price="3.5">
+          <img loading="lazy" src="https://mundoabarrotes.com/wp-content/uploads/2021/02/Arroz-Don-Mario-Extra-Nir-50-kg.webp" alt="Arroz" />
+          <div class="pad">
+            <h3>Arroz</h3>
+            <p class="price">S/ 5.20 / kg</p>
+            <a class="btn" data-whats="Arroz" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Arroz" data-price="5.20">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Tomate" data-price="1.70">
+          <img loading="lazy" src="https://i.ytimg.com/vi/i7nJo58PcTM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCYR0inDhFgIFWqbfiT57UmP2D4TQ" alt="Tomate" />
+          <div class="pad">
+            <h3>Tomate</h3>
+            <p class="price">S/ 1.70 / kg</p>
+            <a class="btn" data-whats="Tomate" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Tomate" data-price="1.70">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Cebolla" data-price="4.90">
+          <img loading="lazy" src="https://elperuano.pe/fotografia//thumbnail/2023/10/23/000270615M.jpg" />
+          <div class="pad">
+            <h3>Cebolla</h3>
+            <p class="price">S/ 4.90 / kg</p>
+            <a class="btn" data-whats="Cebolla" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Cebolla" data-price="4.90">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Mazamorra" data-price="3.50">
+          <img loading="lazy" src="https://peruvianboxofficial.com/cdn/shop/products/image_e7cd9e36-4825-4243-9430-ad70bb81e32d_4472x.jpg?v=1651153076" />
+          <div class="pad">
+            <h3>Mazamorra</h3>
+            <p class="price">S/ 3.50 / Empaque</p>
+            <a class="btn" data-whats="Mazamorra" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Mazamorra" data-price="3.50">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Mayonesa" data-price="4.30">
+          <img loading="lazy" src="https://vegaperu.vtexassets.com/arquivos/ids/159523/7750243046114.jpg?v=637835757917300000" />
+          <div class="pad">
+            <h3>Mayonesa</h3>
+            <p class="price">S/ 4.30 / Sachet</p>
+            <a class="btn" data-whats="Mayonesa" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Mayonesa" data-price="4.30">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Mermelada" data-price="2.00">
+          <img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR90_EdA4qSuGNuTBXYgsw9CR9Uz-qC9_X3tw&s" />
+          <div class="pad">
+            <h3>Mermelada</h3>
+            <p class="price">S/ 2.00 / Sachet</p>
+            <a class="btn" data-whats="Mermelada" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Mermelada" data-price="2.00">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Fideos Don Vittorio" data-price="3.20">
+          <img loading="lazy" src="https://media.falabella.com/tottusPE/42722378_6/w=800,h=800,fit=pad" alt="Fideos" />
+          <div class="pad">
+            <h3>Fideos Don Vittorio Spaquetti</h3>
+            <p class="price">S/ 3.20 / 500g</p>
+            <a class="btn" data-whats="Fideos Don Vittorio" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Fideos Don Vittorio" data-price="6.20">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Mandarina" data-price="3.50">
+          <img loading="lazy" src="https://elcomercio.pe/resizer/v2/BOI3HLFAZVE4RKPA4PJXP562GQ.jpg?auth=c26e030dd970a29d2a00908cd2d290bd8e85545638aaaa6d0a251db756d1e151&width=1500&height=1001&quality=75&smart=true" alt="Mandarina" />
+          <div class="pad">
+            <h3>Mandarina</h3>
+            <p class="price">S/ 3.50 / kg</p>
+            <a class="btn" data-whats="Mandarina" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Mandarina" data-price="15">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Yogurt" data-price="7.00">
+          <img loading="lazy" src="https://static.wixstatic.com/media/921600_b3d9b4ba8d0c4451905c979eda83df93~mv2.jpg/v1/fill/w_480,h_320,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/921600_b3d9b4ba8d0c4451905c979eda83df93~mv2.jpg" alt="Yogurt" />
+          <div class="pad">
+            <h3>Yogurt</h3>
+            <p class="price">S/ 7.00 / botella de 1L</p>
+            <a class="btn" data-whats="Yogurt" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Yogurt" data-price="7.00">Añadir al carrito</button>
+          </div> 
+        </article>
+
+        <article class="card" data-name="Ricocan" data-price="5.50">
+          <img loading="lazy" src="https://images.ctfassets.net/u7dr43bszaws/7qFKCSa3FMCncESoiEZ1kU/b3b77840c9468bb37e57598a3c4f7c89/ricocan.webp" alt="Ricocan" />
+          <div class="pad">
+            <h3>Ricocan</h3>
+            <p class="price">S/ 5.50 / kg</p>
+            <a class="btn" data-whats="Ricocan" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Ricocan" data-price="5.50">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Lejía-Clorox" data-price="5.00">
+          <img loading="lazy" src="https://miamarket.pe/assets/uploads/226b57b71f4e3e43296e893f9cad9879.jpg" />
+          <div class="pad">
+            <h3>Lejía-Clorox</h3>
+            <p class="price">S/ 5.00 / 680ml</p>
+            <a class="btn" data-whats="Lejía-Clorox" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Lejía-Clorox" data-price="15">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Chocolate-Cusco" data-price="6.00">
+          <img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsgAaj6dghCrykKj0QA5OParYaytIVX9vDCpCwrc2Ig_E1lm95MQVbHUDH0v6sYb1pTPg&usqp=CAU" />
+          <div class="pad">
+            <h3>Chocolate-Cusco</h3>
+            <p class="price">S/ 6.00 / 90g</p>
+            <a class="btn" data-whats="Chocolate-Cusco" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Chocolate-Cusco" data-price="6.00">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Sporade" data-price="6.50">
+          <img loading="lazy" src="https://tofuu.getjusto.com/orioneat-local/resized2/EawkHpxR5QXDRhA4Q-2400-x.webp" />
+          <div class="pad">
+            <h3>Sporade</h3>
+            <p class="price">S/ 6.50 / 1.5l</p>
+            <a class="btn" data-whats="Sporade" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Sporade" data-price="6.50">Añadir al carrito</button>
+          </div>
+        </article>
+
+         <article class="card" data-name="Sémolas" data-price="2.00">
+          <img loading="lazy" src="https://media.istockphoto.com/id/1369610164/es/foto/cusc%C3%BAs-en-un-cuenco-antiguo.jpg?s=612x612&w=0&k=20&c=8n3gphDCPvqGChOGZKImzFToBt9vdT_u79sVdquJm18=" />
+          <div class="pad">
+            <h3>Sémolas</h3>
+            <p class="price">S/ 2.00 / 200gr</p>
+            <a class="btn" data-whats="Sémolas" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Sémolas" data-price="2.00">Añadir al carrito</button>
+          </div>
+        </article>
+
+         <article class="card" data-name="Anís" data-price="3.00">
+          <img loading="lazy" src="https://lh3.googleusercontent.com/proxy/N5gVC3LgV4JLe5Xo6dK2INJ8WitbqNUjPo0URX54J--9rr26Jp1cyTRcAKChBsT5vSj3mw7CuusPJdclZMhpfYLeSt44RD6PorVKCB_NclCPMdgf8grPCtjWXNTF" />
+          <div class="pad">
+            <h3>Anís</h3>
+            <p class="price">S/ 3.00 / 25 sobres</p>
+            <a class="btn" data-whats="Anís" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Anís" data-price="3.00">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Manzanilla" data-price="3.00">
+          <img loading="lazy" src="https://vegaperu.vtexassets.com/arquivos/ids/158393/742832821773.jpg?v=637660220922070000" />
+          <div class="pad">
+            <h3>Manzanilla</h3>
+            <p class="price">S/ 3.00 / 25 sobres</p>
+            <a class="btn" data-whats="Manzanilla" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Manzanilla" data-price="3.00">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Té, Canela y Clavo" data-price="3.00">
+          <img loading="lazy" src="https://labodega.com.pe/Adminbackend/fotos/producto12080.jpg" />
+          <div class="pad">
+            <h3>Té, Canela y Clavo</h3>
+            <p class="price">S/ 3.00 / 25 sobres</p>
+            <a class="btn" data-whats="Té, Canela y Clavo" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Té, Canela y Clavo" data-price="3.00">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Gelatina" data-price="4.80">
+          <img loading="lazy" src="https://dojiw2m9tvv09.cloudfront.net/75518/product/13180201373.png" />
+          <div class="pad">
+            <h3>Gelatina</h3>
+            <p class="price">S/ 4.80 / 2l</p>
+            <a class="btn" data-whats="Gelatina" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Gelatina" data-price="4.80">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Flan" data-price="3.80">
+          <img loading="lazy" src="https://plazavea.vteximg.com.br/arquivos/ids/17162933-418-418/20251625-4.jpg" />
+          <div class="pad">
+            <h3>Flan</h3>
+            <p class="price">S/ 3.80 / 90g</p>
+            <a class="btn" data-whats="Flan" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Flan" data-price="3.80">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Fideos Don Vittorio Tornillo" data-price="3.20">
+          <img loading="lazy" src="https://metroio.vtexassets.com/arquivos/ids/461365-800-auto?v=638285960532370000&width=800&height=auto&aspect=true" />
+          <div class="pad">
+            <h3>Fideos Don Vittorio Tornillo</h3>
+            <p class="price">S/ 3.20 / 500g</p>
+            <a class="btn" data-whats="Fideos Don Vittorio Tornillo" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Fideos Don Vittorio Tornillo" data-price="3.20">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Salsa" data-price="2.00">
+          <img loading="lazy" src="https://www.molitalia.com.pe/wp-content/uploads/2020/10/427x427-dummie-salsa-clasica-de-tomate-160g-2021.jpg" />
+          <div class="pad">
+            <h3>Salsa</h3>
+            <p class="price">S/ 2.00 / 160g</p>
+            <a class="btn" data-whats="Salsa" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Salsa" data-price="2.00">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Aji-no-men" data-price="3.00">
+          <img loading="lazy" src="https://www.ajinomoto.com.pe:8085/img/producto/Aji-no-men%C2%AE-Bolsa---Pollo-1260x476.png" />
+          <div class="pad">
+            <h3>Aji-no-men</h3>
+            <p class="price">S/ 3.00 / instantáneo</p>
+            <a class="btn" data-whats="Aji-no-men" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Aji-no-men" data-price="3.00">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Coca Cola" data-price="12.50">
+          <img loading="lazy" src="https://m.media-amazon.com/images/I/81XoIJ8DGRL._UF350,350_QL80_.jpg" />
+          <div class="pad">
+            <h3>Coca Cola</h3>
+            <p class="price">S/ 12.50 / botella de 3l</p>
+            <a class="btn" data-whats="Coca Cola" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Coca Cola" data-price="12.50">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Fanta" data-price="10.00">
+          <img loading="lazy" src="https://super-del-corral.myshopify.com/cdn/shop/products/7422110101225_1636x.jpg?v=1589314785" />
+          <div class="pad">
+            <h3>Fanta</h3>
+            <p class="price">S/ 10.00 / botella de 3l</p>
+            <a class="btn" data-whats="Fanta" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Fanta" data-price="10.00">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Inca kola" data-price="12.50">
+          <img loading="lazy" src="https://fonowaska.com/wp-content/uploads/2023/11/Inca-Kola-3Lt-1.jpg" />
+          <div class="pad">
+            <h3>Inca kola</h3>
+            <p class="price">S/ 12.50 / botella de 3l</p>
+            <a class="btn" data-whats="Inca kola" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Inca-Kola" data-price="12.50">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Fanta" data-price="3.50">
+          <img loading="lazy" src="https://www.coca-cola.com/content/dam/onexp/pe/es/offerings/fanta-wanta/productos/prodsd.jpg" />
+          <div class="pad">
+            <h3>Fanta</h3>
+            <p class="price">S/ 3.50 / botella de 600ml</p>
+            <a class="btn" data-whats="Fanta" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Fanta" data-price="3.50">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Detergente Bolivar" data-price="7.00">
+          <img loading="lazy" src="https://img.offers-cdn.net/assets/uploads/offers/pe/42499534/detergente-en-polvo-bolivar-cuidado-total-bolsa-x-9kg-thumbWebP.webp" />
+          <div class="pad">
+            <h3>Detergente Bolivar</h3>
+            <p class="price">S/ 7.00 / 500g</p>
+            <a class="btn" data-whats="Detergente Bolivar" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Detergente Bolivar" data-price="7.00">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Atún Gloria" data-price="4.50">
+          <img loading="lazy" src="https://i.ytimg.com/vi/4J3CtTbXWA8/maxresdefault.jpg" />
+          <div class="pad">
+            <h3>Atún Gloria</h3>
+            <p class="price">S/ 4.50 / 140g</p>
+            <a class="btn" data-whats="Atún Gloria" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Atún Gloria" data-price="4.50">Añadir al carrito</button>
+          </div>
+        </article>
+
+
+        <article class="card" data-name="Pollo entero" data-price="22.00">
+          <img loading="lazy" src="https://oidococinablog.com/wp-content/uploads/2021/02/simple-rapido-delicioso.-10.jpg" />
+          <div class="pad">
+            <h3>Pollo entero</h3>
+            <p class="price">S/ 22.00 / 4.5kg</p>
+            <a class="btn" data-whats="Pollo entero" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Pollo entero" data-price="22.00">Añadir al carrito</button>
+          </div>
+        </article>
+
+         <article class="card" data-name="Azúcar Rubia" data-price="4.50">
+          <img loading="lazy" src="https://media.falabella.com/tottusPE/40546552_1/w=1500,h=1500,fit=pad" />
+          <div class="pad">
+            <h3>Azúcar Rubia</h3>
+            <p class="price">S/ 4.50 / 1kg</p>
+            <a class="btn" data-whats="Azúcar Rubia" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Azúcar Rubia" data-price="4.50">Añadir al carrito</button>
+          </div>
+        </article>
+
+         <article class="card" data-name="Avena precocida" data-price="3.00">
+          <img loading="lazy" src="https://www.molitalia.com.pe/wp-content/uploads/2020/09/CLASICA-60G.jpg" />
+          <div class="pad">
+            <h3>Avena precocida</h3>
+            <p class="price">S/ 3.00 / 60g</p>
+            <a class="btn" data-whats="Avena precocida" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Avena precocida" data-price="3.00">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Mantequilla" data-price="3.50">
+          <img loading="lazy" src="https://media.falabella.com/tottusPE/40742583_4/w=800,h=800,fit=pad" alt="Ricocan" />
+          <div class="pad">
+            <h3>Mantequilla</h3>
+            <p class="price">S/ 3.50 / 90g</p>
+            <a class="btn" data-whats="Mantequilla" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Mantequilla" data-price="3.50">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Ricocat" data-price="9.00">
+          <img loading="lazy" src="https://www.superpet.pe/on/demandware.static/-/Sites-SuperPet-master-catalog/default/dw5f8a00bc/images/AG000146_m.jpg" />
+          <div class="pad">
+            <h3>Ricocat</h3>
+            <p class="price">S/ 9.00 / kg</p>
+            <a class="btn" data-whats="Ricocat" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Ricocat" data-price="9.00">Añadir al carrito</button>
+          </div>
+        </article>
+
+         <article class="card" data-name="Café Altomayo" data-price="5.90">
+          <img loading="lazy" src="https://images.rappi.pe/products/896191565399_jceyfnepjbeu_464129047429_fvomceebkwaisc_7750463000002_1.jpg" />
+          <div class="pad">
+            <h3>Café Altomayo</h3>
+            <p class="price">S/ 5.90 / 170g</p>
+            <a class="btn" data-whats="Café Altomayo" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Café Altomayo" data-price="5.90">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Papaya" data-price="Sale x Peso">
+          <img loading="lazy" src="https://eibrx5yeyug.exactdn.com/wp-content/uploads/2025/07/Papaya.jpg?strip=all&lossy=1&ssl=1" alt="Papaya" />
+          <div class="pad">
+            <h3>Papaya</h3>
+            <p class="price">S/ Sale x peso / Unidad</p>
+            <a class="btn" data-whats="Papaya" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Papaya" data-price="Sale x Peso">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Sal de Mesa/Cocina" data-price="2.70">
+          <img loading="lazy" src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/a8ebf766102101.5b0b2680ee795.jpg" alt="Sal de Mesa/Cocina" />
+          <div class="pad">
+            <h3>Sal de Mesa/Cocina</h3>
+            <p class="price">S/ 2.70 / empaque</p>
+            <a class="btn" data-whats="Sal de Mesa/Cocina" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Sal de Mesa/Cocina" data-price="2.70">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Atún Filete" data-price="6.50">
+          <img loading="lazy" src="https://katyamayorista.com/wp-content/uploads/2023/03/Filete-Florida-600x600.jpg" alt="Atún Filete" />
+          <div class="pad">
+            <h3>Atún Filete</h3>
+            <p class="price">S/ 6.50 / kg</p>
+            <a class="btn" data-whats="Atún Filete" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Atún Filete" data-price="6.50">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Quinoa" data-price="3.50">
+          <img loading="lazy" src="https://blog.oxfamintermon.org/wp-content/uploads/2015/06/iStock_000051185184_Small-726x483.jpg" alt="Quinoa" />
+          <div class="pad">
+            <h3>Quinoa</h3>
+            <p class="price">S/ 3.50 / kg</p>
+            <a class="btn" data-whats="Quinoa" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Quinoa" data-price="3.50">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Papa Blanca" data-price="2.30">
+          <img loading="lazy" src="https://homipersonaliza.com/cdn/shop/products/CapturadePantalla2020-10-26ala_s_14.48.19.png?v=1603745349" alt="Papa Blanca" />
+          <div class="pad">
+            <h3>Papa Blanca</h3>
+            <p class="price">S/ 2.30 / kg</p>
+            <a class="btn" data-whats="Papa Blanca" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Papa Blanca" data-price="2.30">Añadir al carrito</button>
+          </div>
+        </article>
+
+<article class="card" data-name="Sublime Chocolate" data-price="2.60">
+          <img loading="lazy" src="https://static.mercadonegro.pe/wp-content/uploads/2020/05/13123132/chocolate-sublime-historia.jpg" alt="Sublime Chocolate" />
+          <div class="pad">
+            <h3>Sublime Chocolate</h3>
+            <p class="price">S/ 2.60 / Unidad</p>
+            <a class="btn" data-whats="Sublime Chocolate" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Sublime Chocolate" data-price="2.60">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Papas Lays" data-price="1.00">
+          <img loading="lazy" src="https://plazavea.vteximg.com.br/arquivos/ids/31462885-512-512/20355479-3.jpg" alt="Papas Lays" />
+          <div class="pad">
+            <h3>Papas Lays</h3>
+            <p class="price">S/ 1.00 /  Bolsa</p>
+            <a class="btn" data-whats="Papas Lays" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Papas Lays" data-price="1.00">Añadir al carrito</button>
+          </div>
+        </article>
+
+ <article class="card" data-name="Chizitos" data-price="1.00">
+          <img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxthS80C3LGqLneIhp3H4r0ioVH6cVfm2uwQ&s" alt="Chizitos" />
+          <div class="pad">
+            <h3>Chizitos</h3>
+            <p class="price">S/ 1.00 /  Bolsa</p>
+            <a class="btn" data-whats="Chizitos" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Chizitos" data-price="1.00">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Gaseosa Coca Cola 600 ml" data-price="3.70">
+          <img loading="lazy" src="https://p.turbosquid.com/ts-thumb/TW/2g571G/Lt/bottle_dark/jpg/1634345773/600x600/fit_q87/2553fd6f8eff3d9ea316ea800db56f7ffe64a4f4/bottle_dark.jpg" alt="Gaseosa Coca Cola 600 ml" />
+          <div class="pad">
+            <h3>Gaseosa Coca Cola 600 ml</h3>
+            <p class="price">S/ 3.70 /  Botella de 600 ml</p>
+            <a class="btn" data-whats="Gaseosa Coca Cola 600 ml" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Gaseosa Coca Cola 600 ml" data-price="3.70">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Gaseosa Inca Cola 600 ml" data-price="3.70">
+          <img loading="lazy" src="https://tofuu.getjusto.com/orioneat-local/resized2/XGDCwHKqQmXHAjDr3-2400-x.webp" alt="Gaseosa Inca Cola 600 ml" />
+          <div class="pad">
+            <h3>Gaseosa Inca Cola 600 ml</h3>
+            <p class="price">S/ 3.70 /  Botella de 600 ml</p>
+            <a class="btn" data-whats="Gaseosa Inca Cola 600 ml" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Gaseosa Inca Cola 600 ml" data-price="3.70">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Sporade" data-price="2.60">
+          <img loading="lazy" src="https://i.ytimg.com/vi/52p_fHcrjTE/maxresdefault.jpg" alt="Sporade botella de 500 ml" />
+          <div class="pad">
+            <h3>Sporade</h3>
+            <p class="price">S/2.60 /  botella de 500 ml</p>
+            <a class="btn" data-whats="Sporade" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Sporade" data-price="2.60">Añadir al carrito</button>
+          </div>
+        </article>
+
+         <article class="card" data-name="Harina" data-price="4.20">
+          <img loading="lazy" src="https://campoenaccion.com/galeria/fotos/2021/08/11/f_1628718358.jpg" alt="Harina" />
+          <div class="pad">
+            <h3>Harina</h3>
+            <p class="price">S/ 4.20 / 1 kg</p>
+            <a class="btn" data-whats="Harina" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Harina" data-price="4.20">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Chuño" data-price="9.90">
+          <img loading="lazy" src="https://www.gastronosfera.com/sites/default/files/styles/wide/public/trending/2023/gastronosfera_chuno.jpg.webp" alt="Chuño" />
+          <div class="pad">
+            <h3>Chuño</h3>
+            <p class="price">S/ 9.90 / 1 kg</p>
+            <a class="btn" data-whats="Chuño" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Chuño" data-price="9.90">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Charqui de Alpaca" data-price="9.90">
+          <img loading="lazy" src="https://osojimix.com/wp-content/uploads/2023/11/CHARQUI.jpeg" alt="Charqui de Alpaca" />
+          <div class="pad">
+            <h3>Charqui de Alpaca</h3>
+            <p class="price">S/ 9.90 / 250 g</p>
+            <a class="btn" data-whats="Charqui de Alpaca" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Charqui de Alpaca" data-price="9.90">Añadir al carrito</button>
+          </div>
+        </article>
+        
+        <article class="card" data-name="Lentejas" data-price="7.20">
+          <img loading="lazy" src="https://www.laespanolaaceites.com/wp-content/uploads/2019/10/tipos-de-lentejas-1.jpg" alt="Lentejas" />
+          <div class="pad">
+            <h3>Lentejas</h3>
+            <p class="price">S/ 7.20 / kg</p>
+            <a class="btn" data-whats="Lentejas" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Lentejas" data-price="7.20">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Aceite vegetal" data-price="12.00">
+          <img loading="lazy" src="https://gestion.pe/resizer/GwFF0G5dSxGrEU0nUyccDyJAs10=/1200x900/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/ZSNUJJNZ7JFXFI33MK4QOPFQZI.jpg" alt="Aceite vegetal" />
+          <div class="pad">
+            <h3>Aceite vegetal</h3>
+            <p class="price">S/ 10.00 / botella</p>
+            <a class="btn" data-whats="Aceite vegetal" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Aceite vegetal" data-price="12.00">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Huevos frescos" data-price="0.9">
+          <img loading="lazy" src="https://cloudfront-us-east-1.images.arcpublishing.com/infobae/27HIZC22HVGVTIFRDKAKWIE7IY.jpg" alt="Huevos frescos" />
+          <div class="pad">
+            <h3>Huevos frescos</h3>
+            <p class="price">S/ 0.60 / unidad</p>
+            <p class="price">S/ 8.50 / kg</p>
+            <a class="btn" data-whats="Huevos frescos" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Huevos frescos" data-price="8.50">Añadir al carrito</button>
+          </div>
+        </article>
+
+        <article class="card" data-name="Volt" data-price="2.70">
+          <img loading="lazy" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFbL7URm8B58t8TUj7C68x97VcS7EqSAPeyApHsZ86lsYg42h4-VfrbeO8KBPI7NW78AM&usqp=CAU" alt="Volt" />
+          <div class="pad">
+            <h3>Volt</h3>
+            <p class="price">S/ 2.70 / unidad</p>
+            <a class="btn" data-whats="Volt" href="#">Pedir por WhatsApp</a>
+            <button class="add-to-cart" data-name="Volt" data-price="2.70">Añadir al carrito</button>
+          </div>
+        </article>
+      
+      <!-- 🛒 Carrito -->
+<div id="cart-modal" class="cart-modal">
+  <div class="cart-content">
+    <span id="close-cart" class="close">&times;</span>
+    <h2>🛒 Tu carrito</h2>
+    <ul id="cart-items"></ul>
+    <p><strong>Total: S/ <span id="cart-total">0.00</span></strong></p>
+    <button id="finalizar-pedido" class="btn">Finalizar pedido</button>
+  </div>
+</div>
+
+      </div>
+    </section>
+
+    <section id="delivery" aria-labelledby="h2-delivery">
+      <h2 id="h2-delivery">Delivery y pagos</h2>
+      <div class="contact">
+        <p>🚚 <strong>Delivery local el mismo día</strong> (pedidos hasta las 4:00 p. m.).</p>
+        <p>💳 Pagos: <strong>Yape, Plin o efectivo: 986728337 </strong> contra entrega.</p>
+        <p>📦 Pedidos por WhatsApp con el botón de cada producto o el botón principal.</p>
+      </div>
+    </section>
+
+    <section id="contacto" aria-labelledby="h2-contacto">
+      <h2 id="h2-contacto">Contacto</h2>
+      <div class="contact">
+        <p>📍 Casapalca, Huarochirí, Lima – Perú</p>
+        <p>📞 Tel: <a href="tel:+51986728337">+51 986728337</a></p>
+        <p>💬 WhatsApp: <a id="wa2" href="https://wa.me/51986728337?text=Hola%20Casapalca%20Market%2C%20quisiera%20información" target="_blank" rel="noopener">Hacer pedido</a></p>
+        <p>📧 Correo: <a href="mailto:casapalcastore@gmail.com">casapalcastore@gmail.come</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer aria-label="Pie de página">
+    <div class="wrap">© <span id="year"></span> Casapalca Market Online • Todos los derechos reservados</div>
+  </footer>
+
+  <!-- Esquema SEO JSON-LD: negocio local / tienda de abarrotes -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "GroceryStore",
+    "name": "Casapalca Market Online",
+    "image": ["https://alpayana.com/wp-content/uploads/2023/03/yauliyacu.webp"],
+    "url": "https://tu-dominio.netlify.app/",
+    "telephone": "+51 986728337",
+    "priceRange": "S/",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Casapalca",
+      "addressRegion": "Huarochirí, Lima",
+      "addressCountry": "PE"
+    },
+    "areaServed": "Casapalca, Lima, Perú",
+    "paymentAccepted": "Cash, Yape, Plin",
+    "hasDelivery": true,
+    "sameAs": [
+      "https://www.facebook.com/tu-pagina",
+      "https://www.instagram.com/tu-pagina"
+    ]
+  }
+
+</script>
+<script>
+  const WHATSAPP_NUMBER = "51986728337"; 
+  const cart = [];
+  const cartItemsEl = document.getElementById("cart-items");
+  const cartTotalEl = document.getElementById("cart-total");
+  const finalizarBtn = document.getElementById("finalizar-pedido");
+
+  // añadir productos al carrito
+  document.querySelectorAll(".add-to-cart").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const name = btn.dataset.name;
+      const price = parseFloat(btn.dataset.price);
+      cart.push({ name, price });
+      renderCart();
+    });
+  });
+
+  function renderCart() {
+    cartItemsEl.innerHTML = "";
+    let total = 0;
+    cart.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = `${item.name} - S/ ${item.price.toFixed(2)}`;
+      cartItemsEl.appendChild(li);
+      total += item.price;
+    });
+    cartTotalEl.textContent = total.toFixed(2);
+  }
+
+  finalizarBtn.addEventListener("click", () => {
+    if (cart.length === 0) {
+      alert("Tu carrito está vacío 😅");
+      return;
+    }
+    let mensaje = "Hola Casapalca Market, quiero hacer este pedido:%0A";
+    cart.forEach(item => {
+      mensaje += `- ${item.name}: S/ ${item.price.toFixed(2)}%0A`;
+    });
+    mensaje += `%0A✅ Total: S/ ${cartTotalEl.textContent}`;
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${mensaje}`;
+    window.open(url, "_blank");
+  });
+</script>
+<script>
+  document.querySelectorAll(".btn[data-whats]").forEach(boton => {
+    boton.addEventListener("click", e => {
+      e.preventDefault();
+      const producto = boton.getAttribute("data-whats");
+      const numero = "519171448839"; // 👈 tu número con código de país
+      const mensaje = `Hola Casapalca Market, quiero pedir: ${producto}`;
+      const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+      window.open(url, "_blank");
+    });
+  });
+</script>
+</body>
+</html>
+</body>
+</html>
